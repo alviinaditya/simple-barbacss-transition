@@ -1,0 +1,84 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+body {
+  --page-background: #fff;
+
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  overflow: hidden;
+  background-color: var(--page-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+section {
+  --base-color: #fff;
+
+  width: 100vw;
+  height: 100vh;
+  color: var(--base-color);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 14vw;
+
+  .content {
+    max-width: 70%;
+    transition: all 0.3s ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h1 {
+    font-size: 3vw;
+    margin-bottom: 2.5vh;
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: 1.4vw;
+    line-height: 1.4;
+    opacity: 0.8;
+    margin-bottom: 5.375vh;
+  }
+
+  a {
+    font-size: 1.4vw;
+    padding: 20px 2vw;
+    display: inline-block;
+    text-align: center;
+    color: var(--base-color);
+    border: 3px solid var(--base-color);
+    border-radius: 10px;
+    text-decoration: none;
+    &:hover {
+      color: var(--base-color);
+    }
+  }
+
+  &.p-index {
+    background-color: #c44569;
+  }
+  &.p-slide-right {
+    --base-color: #303952;
+    background-color: #63cdda;
+  }
+  &.p-slide-up {
+    --base-color: #303952;
+    background-color: #f7d794;
+  }
+  &.p-slide-left {
+    background-color: #574b90;
+  }
+}

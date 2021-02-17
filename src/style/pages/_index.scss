@@ -1,0 +1,46 @@
+.index-once {
+  opacity: 0;
+}
+.index-once-active {
+  transition: all 1s ease-in 0.3s;
+}
+.index-once-to {
+  opacity: 1;
+}
+
+.index-leave {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.index-leave-active,
+.index-leave-active .content {
+  transition: all 0.7s var(--easing);
+}
+
+.index-leave-to .content {
+  transform: translateX(50%);
+}
+
+.index-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.index-enter {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.index-enter-active,
+.index-enter-active .content {
+  transition: all 0.7s var(--easing);
+}
+
+.index-enter-to {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(0);
+  opacity: 1;
+}
