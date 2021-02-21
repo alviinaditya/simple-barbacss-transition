@@ -2,6 +2,14 @@
 // When having several themes, this file contains everything related to the
 // default one.
 // -----------------------------------------------------------------------------
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-smooth: antialiased;
+  text-rendering: optimizeLegibility;
+  @include fluid-type(font-size, $minScreen, $maxScreen, $minFont, $maxFont);
+}
+
 body {
   --page-background: #fff;
 
@@ -41,21 +49,21 @@ section {
   }
 
   h1 {
-    font-size: 3vw;
+    font-size: $h2;
     margin-bottom: 2.5vh;
     line-height: 1.4;
   }
 
   p {
-    font-size: 1.4vw;
+    font-size: $h5;
     line-height: 1.4;
     opacity: 0.8;
-    margin-bottom: 5.375vh;
+    margin-bottom: $baseline;
   }
 
   a {
-    font-size: 1.4vw;
-    padding: 20px 2vw;
+    font-size: $h4;
+    padding: 20px;
     display: inline-block;
     text-align: center;
     color: var(--base-color);
